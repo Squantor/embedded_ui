@@ -27,5 +27,5 @@ Common used strings
 
 #include <strings.hpp>
 
-const char strHello[] = "Switched capacitor demo\r\n";
+const char strHello[] = "Embedded user interface demo\r\n";
 const char strCrLf[] = "\r\n";
