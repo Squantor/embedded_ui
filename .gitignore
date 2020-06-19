@@ -1,0 +1,47 @@
+# kicad backup files 
+*.bak
+*.kicad_pcb-bak
+*.net
+rescue-backup/
+_autosave*
+*.sch-bak
+
+# kicad ignorable generated files
+plots/
+plots-*/
+*_plots/
+*.zip
+
+#kicad caches
+fp-info-cache
+*-cache.lib
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+build/
+Debug/
+Release/
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+bin/
+
+#miscellanious generated files
+*.log
+
