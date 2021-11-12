@@ -4,3 +4,12 @@
 [submodule "electronics/MX_Alps_Hybrid"]
 	path = electronics/MX_Alps_Hybrid
 	url = https://github.com/Squantor/MX_Alps_Hybrid.git
+[submodule "software/libMcuLL"]
+	path = software/libMcuLL
+	url = git@github.com:Squantor/libMcuLL.git
+[submodule "software/squantorLibEmbedded"]
+	path = software/squantorLibEmbedded
+	url = git@github.com:Squantor/squantorLibEmbedded.git
+[submodule "software/squantorLibC"]
+	path = software/squantorLibC
+	url = git@github.com:Squantor/squantorLibC.git
