@@ -1,9 +1,9 @@
 [submodule "electronics/squantorPcbLibrary"]
 	path = electronics/squantorPcbLibrary
-	url = https://github.com/Squantor/squantorPcbLibrary.git
+	url = git@github.com:Squantor/squantorPcbLibrary.git
 [submodule "electronics/MX_Alps_Hybrid"]
 	path = electronics/MX_Alps_Hybrid
-	url = https://github.com/Squantor/MX_Alps_Hybrid.git
+	url = git@github.com:Squantor/MX_Alps_Hybrid.git
 [submodule "software/libMcuLL"]
 	path = software/libMcuLL
 	url = git@github.com:Squantor/libMcuLL.git
