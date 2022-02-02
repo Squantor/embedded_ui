@@ -16,83 +16,83 @@ $EndDescr
 $Comp
 L SquantorLabels:VYYYYMMDD N2
 U 1 1 5A1357A5
-P 10700 6150
-F 0 "N2" H 10700 6250 60  0000 C CNN
-F 1 "V20220201" H 10700 6150 60  0000 C CNN
-F 2 "SquantorLabels:Label_Generic" H 10700 6150 60  0001 C CNN
-F 3 "" H 10700 6150 60  0001 C CNN
-	1    10700 6150
+P 10700 6100
+F 0 "N2" H 10700 6200 60  0000 C CNN
+F 1 "V20220201" H 10700 6100 60  0000 C CNN
+F 2 "SquantorLabels:Label_Generic" H 10700 6100 60  0001 C CNN
+F 3 "" H 10700 6100 60  0001 C CNN
+	1    10700 6100
 	1    0    0    -1  
 $EndComp
 $Comp
 L SquantorLabels:OHWLOGO N1
 U 1 1 5A135869
-P 10700 5800
-F 0 "N1" H 10700 5950 60  0000 C CNN
-F 1 "OHWLOGO" H 10700 5650 60  0000 C CNN
-F 2 "Symbols:OSHW-Symbol_6.7x6mm_SilkScreen" H 10700 5800 60  0001 C CNN
-F 3 "" H 10700 5800 60  0001 C CNN
-	1    10700 5800
+P 10700 5750
+F 0 "N1" H 10700 5900 60  0000 C CNN
+F 1 "OHWLOGO" H 10700 5600 60  0000 C CNN
+F 2 "Symbols:OSHW-Symbol_6.7x6mm_SilkScreen" H 10700 5750 60  0001 C CNN
+F 3 "" H 10700 5750 60  0001 C CNN
+	1    10700 5750
 	1    0    0    -1  
 $EndComp
-Text Notes 10300 6400 0    50   ~ 0
+Text Notes 10300 6350 0    50   ~ 0
 mounting & labels
 Wire Notes Line
-	11050 6450 11050 5250
+	11050 6400 11050 5200
 Wire Notes Line
-	11050 5250 9650 5250
+	11050 5200 9650 5200
 Wire Notes Line
-	9650 5250 9650 6450
+	9650 5200 9650 6400
 Wire Notes Line
-	9650 6450 11050 6450
+	9650 6400 11050 6400
 $Comp
 L Mechanical:MountingHole H1
 U 1 1 61F9C417
-P 9750 5500
-F 0 "H1" H 9850 5546 50  0000 L CNN
-F 1 "MountingHole" H 9850 5455 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9750 5500 50  0001 C CNN
-F 3 "~" H 9750 5500 50  0001 C CNN
-	1    9750 5500
+P 9750 5450
+F 0 "H1" H 9850 5496 50  0000 L CNN
+F 1 "MountingHole" H 9850 5405 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9750 5450 50  0001 C CNN
+F 3 "~" H 9750 5450 50  0001 C CNN
+	1    9750 5450
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H2
 U 1 1 61F9CA21
-P 9750 5700
-F 0 "H2" H 9850 5746 50  0000 L CNN
-F 1 "MountingHole" H 9850 5655 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9750 5700 50  0001 C CNN
-F 3 "~" H 9750 5700 50  0001 C CNN
-	1    9750 5700
+P 9750 5650
+F 0 "H2" H 9850 5696 50  0000 L CNN
+F 1 "MountingHole" H 9850 5605 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9750 5650 50  0001 C CNN
+F 3 "~" H 9750 5650 50  0001 C CNN
+	1    9750 5650
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H3
 U 1 1 61F9CCCB
-P 9750 5900
-F 0 "H3" H 9850 5946 50  0000 L CNN
-F 1 "MountingHole" H 9850 5855 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9750 5900 50  0001 C CNN
-F 3 "~" H 9750 5900 50  0001 C CNN
-	1    9750 5900
+P 9750 5850
+F 0 "H3" H 9850 5896 50  0000 L CNN
+F 1 "MountingHole" H 9850 5805 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9750 5850 50  0001 C CNN
+F 3 "~" H 9750 5850 50  0001 C CNN
+	1    9750 5850
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H4
 U 1 1 61F9D056
-P 9750 6100
-F 0 "H4" H 9850 6146 50  0000 L CNN
-F 1 "MountingHole" H 9850 6055 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9750 6100 50  0001 C CNN
-F 3 "~" H 9750 6100 50  0001 C CNN
-	1    9750 6100
+P 9750 6050
+F 0 "H4" H 9850 6096 50  0000 L CNN
+F 1 "MountingHole" H 9850 6005 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 9750 6050 50  0001 C CNN
+F 3 "~" H 9750 6050 50  0001 C CNN
+	1    9750 6050
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
-	11050 6300 10250 6300
+	11050 6250 10250 6250
 Wire Notes Line
-	10250 6300 10250 6450
+	10250 6250 10250 6400
 $Comp
 L Connector_Generic:Conn_01x06 J1
 U 1 1 61FA03AE
@@ -259,4 +259,72 @@ Wire Notes Line
 	2100 1450 1800 1450
 Wire Notes Line
 	1800 1450 1800 1600
+$Comp
+L SquantorModules:I2C_OLED U2
+U 1 1 61FAB558
+P 1800 2100
+F 0 "U2" H 1750 2400 50  0000 L CNN
+F 1 "128x64" H 1650 1800 50  0000 L CNN
+F 2 "SquantorModules:OLED_128x64" H 1750 2100 50  0001 C CNN
+F 3 "" H 1750 2100 50  0001 C CNN
+	1    1800 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L SquantorModules:I2C_OLED U1
+U 1 1 61FAC7CD
+P 1150 2100
+F 0 "U1" H 1100 2400 50  0000 L CNN
+F 1 "128x32" H 1000 1800 50  0000 L CNN
+F 2 "SquantorModules:OLED_128x32" H 1100 2100 50  0001 C CNN
+F 3 "" H 1100 2100 50  0001 C CNN
+	1    1150 2100
+	1    0    0    -1  
+$EndComp
+Text Label 850  2150 2    50   ~ 0
+SCL
+Text Label 850  2250 2    50   ~ 0
+SDA
+Text Label 1500 2150 2    50   ~ 0
+SCL
+Text Label 1500 2250 2    50   ~ 0
+SDA
+Text Label 1500 1950 2    50   ~ 0
+VSS
+Text Label 1500 2050 2    50   ~ 0
+3.3V
+Text Label 850  1950 2    50   ~ 0
+VSS
+Text Label 850  2050 2    50   ~ 0
+3.3V
+Wire Wire Line
+	850  1950 900  1950
+Wire Wire Line
+	900  2050 850  2050
+Wire Wire Line
+	850  2150 900  2150
+Wire Wire Line
+	900  2250 850  2250
+Wire Wire Line
+	1500 1950 1550 1950
+Wire Wire Line
+	1550 2050 1500 2050
+Wire Wire Line
+	1500 2150 1550 2150
+Wire Wire Line
+	1550 2250 1500 2250
+Text Notes 1650 2550 0    50   ~ 0
+Displays
+Wire Notes Line
+	2050 1700 600  1700
+Wire Notes Line
+	600  1700 600  2600
+Wire Notes Line
+	600  2600 2050 2600
+Wire Notes Line
+	2050 1700 2050 2600
+Wire Notes Line
+	2050 2450 1600 2450
+Wire Notes Line
+	1600 2450 1600 2600
 $EndSCHEMATC
