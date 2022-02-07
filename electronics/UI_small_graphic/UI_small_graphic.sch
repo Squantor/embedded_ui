@@ -110,11 +110,11 @@ Text Label 1400 1000 0    50   ~ 0
 3.3V
 Text Label 1400 1100 0    50   ~ 0
 VSS
-Text Label 1400 1200 0    50   ~ 0
+Text Label 1350 1200 0    50   ~ 0
 SDA
-Text Label 1400 1300 0    50   ~ 0
+Text Label 1350 1300 0    50   ~ 0
 SCL
-Text Label 1400 1400 0    50   ~ 0
+Text Label 1350 1400 0    50   ~ 0
 !INT
 Wire Wire Line
 	950  1200 1000 1200
@@ -161,7 +161,7 @@ $Comp
 L Device:R R1
 U 1 1 61FA2D7E
 P 1150 1200
-F 0 "R1" V 1200 1350 50  0000 C CNN
+F 0 "R1" V 1100 1350 50  0000 C CNN
 F 1 "100" V 1150 1200 50  0000 C CNN
 F 2 "SquantorRcl:R_0603_hand" V 1080 1200 50  0001 C CNN
 F 3 "~" H 1150 1200 50  0001 C CNN
@@ -172,7 +172,7 @@ $Comp
 L Device:R R2
 U 1 1 61FA58E5
 P 1150 1300
-F 0 "R2" V 1200 1450 50  0000 C CNN
+F 0 "R2" V 1100 1450 50  0000 C CNN
 F 1 "100" V 1150 1300 50  0000 C CNN
 F 2 "SquantorRcl:R_0603_hand" V 1080 1300 50  0001 C CNN
 F 3 "~" H 1150 1300 50  0001 C CNN
@@ -183,7 +183,7 @@ $Comp
 L Device:R R3
 U 1 1 61FA656D
 P 1150 1400
-F 0 "R3" V 1200 1550 50  0000 C CNN
+F 0 "R3" V 1100 1550 50  0000 C CNN
 F 1 "100" V 1150 1400 50  0000 C CNN
 F 2 "SquantorRcl:R_0603_hand" V 1080 1400 50  0001 C CNN
 F 3 "~" H 1150 1400 50  0001 C CNN
@@ -191,11 +191,9 @@ F 3 "~" H 1150 1400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1300 1400 1400 1400
+	1350 1300 1300 1300
 Wire Wire Line
-	1400 1300 1300 1300
-Wire Wire Line
-	1300 1200 1400 1200
+	1300 1200 1350 1200
 $Comp
 L Device:Ferrite_Bead FB2
 U 1 1 61FAD7B8
@@ -327,4 +325,202 @@ Wire Notes Line
 	2050 2450 1600 2450
 Wire Notes Line
 	1600 2450 1600 2600
+$Comp
+L SquantorNxp:PCF8574 U?
+U 1 1 6200FB37
+P 1300 3250
+F 0 "U?" H 1300 3700 50  0000 C CNN
+F 1 "PCF8574" H 1300 2700 50  0000 C CNN
+F 2 "SquantorIC:SOT162-1-NXP" H 1330 3400 20  0001 C CNN
+F 3 "" H 1300 3250 60  0000 C CNN
+	1    1300 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 62010A3A
+P 1050 4050
+F 0 "C?" V 1000 4150 50  0000 C CNN
+F 1 "1u" V 1100 4150 50  0000 C CNN
+F 2 "SquantorRcl:C_0603" H 1088 3900 50  0001 C CNN
+F 3 "~" H 1050 4050 50  0001 C CNN
+	1    1050 4050
+	0    -1   -1   0   
+$EndComp
+Text Label 950  3650 2    50   ~ 0
+VSS
+Text Label 1650 2950 0    50   ~ 0
+3.3V
+Text Label 1250 4050 0    50   ~ 0
+VSS
+Text Label 850  4050 2    50   ~ 0
+3.3V
+Wire Wire Line
+	850  4050 900  4050
+Wire Wire Line
+	1200 4050 1250 4050
+Wire Wire Line
+	950  3650 1000 3650
+Wire Wire Line
+	1600 2950 1650 2950
+Text Label 1650 3150 0    50   ~ 0
+SCL
+Text Label 1650 3050 0    50   ~ 0
+SDA
+Wire Wire Line
+	1650 3050 1600 3050
+Wire Wire Line
+	1600 3150 1650 3150
+Text Label 1650 3250 0    50   ~ 0
+!INT
+Wire Wire Line
+	1650 3250 1600 3250
+Text Notes 1500 4150 0    50   ~ 0
+PCF expander
+Wire Notes Line
+	600  2700 2050 2700
+Wire Notes Line
+	2050 2700 2050 4200
+Wire Notes Line
+	2050 4200 600  4200
+Wire Notes Line
+	600  4200 600  2700
+Wire Notes Line
+	2050 4000 1450 4000
+Wire Notes Line
+	1450 4000 1450 4200
+$Comp
+L Device:R R?
+U 1 1 6201B064
+P 1600 1400
+F 0 "R?" V 1550 1550 50  0000 C CNN
+F 1 "4.7K" V 1600 1400 50  0000 C CNN
+F 2 "SquantorRcl:R_0603_hand" V 1530 1400 50  0001 C CNN
+F 3 "~" H 1600 1400 50  0001 C CNN
+	1    1600 1400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1300 1400 1450 1400
+Text Label 1800 1400 0    50   ~ 0
+3.3V
+Wire Wire Line
+	1800 1400 1750 1400
+Text Label 950  3250 2    50   ~ 0
+BUTTON0
+Text Label 950  3350 2    50   ~ 0
+BUTTON1
+Text Label 950  3450 2    50   ~ 0
+BUTTON2
+Text Label 950  3550 2    50   ~ 0
+BUTTON3
+Wire Wire Line
+	950  3250 1000 3250
+Wire Wire Line
+	1000 3350 950  3350
+Wire Wire Line
+	950  3450 1000 3450
+Wire Wire Line
+	1000 3550 950  3550
+Text Label 1650 3650 0    50   ~ 0
+BUTTON4
+Text Label 1650 3550 0    50   ~ 0
+BUTTON4
+Text Label 1650 3450 0    50   ~ 0
+BUTTON4
+Text Label 1650 3350 0    50   ~ 0
+BUZZ
+Wire Wire Line
+	1600 3350 1650 3350
+Wire Wire Line
+	1650 3450 1600 3450
+Wire Wire Line
+	1600 3550 1650 3550
+Wire Wire Line
+	1650 3650 1600 3650
+$Comp
+L Device:C C?
+U 1 1 620368EE
+P 1050 5650
+F 0 "C?" V 1000 5750 50  0000 C CNN
+F 1 "1u" V 1100 5750 50  0000 C CNN
+F 2 "SquantorRcl:C_0603" H 1088 5500 50  0001 C CNN
+F 3 "~" H 1050 5650 50  0001 C CNN
+	1    1050 5650
+	0    -1   -1   0   
+$EndComp
+Text Label 950  5250 2    50   ~ 0
+VSS
+Text Label 1650 4550 0    50   ~ 0
+3.3V
+Text Label 1250 5650 0    50   ~ 0
+VSS
+Text Label 850  5650 2    50   ~ 0
+3.3V
+Wire Wire Line
+	850  5650 900  5650
+Wire Wire Line
+	1200 5650 1250 5650
+Wire Wire Line
+	950  5250 1000 5250
+Wire Wire Line
+	1600 4550 1650 4550
+Text Label 1650 4750 0    50   ~ 0
+SCL
+Text Label 1650 4650 0    50   ~ 0
+SDA
+Wire Wire Line
+	1650 4650 1600 4650
+Wire Wire Line
+	1600 4750 1650 4750
+Text Label 1650 4850 0    50   ~ 0
+!INT
+Wire Wire Line
+	1650 4850 1600 4850
+Text Notes 1500 5750 0    50   ~ 0
+PCF expander
+Wire Notes Line
+	600  4300 2050 4300
+Wire Notes Line
+	2050 4300 2050 5800
+Wire Notes Line
+	2050 5800 600  5800
+Wire Notes Line
+	600  5800 600  4300
+Wire Notes Line
+	2050 5600 1450 5600
+Wire Notes Line
+	1450 5600 1450 5800
+Text Label 950  4850 2    50   ~ 0
+BUTTON0
+Text Label 950  4950 2    50   ~ 0
+BUTTON1
+Text Label 950  5050 2    50   ~ 0
+BUTTON2
+Text Label 950  5150 2    50   ~ 0
+BUTTON3
+Wire Wire Line
+	950  4850 1000 4850
+Wire Wire Line
+	1000 4950 950  4950
+Wire Wire Line
+	950  5050 1000 5050
+Wire Wire Line
+	1000 5150 950  5150
+Text Label 1650 5250 0    50   ~ 0
+BUTTON4
+Text Label 1650 5150 0    50   ~ 0
+BUTTON4
+Text Label 1650 5050 0    50   ~ 0
+BUTTON4
+Text Label 1650 4950 0    50   ~ 0
+BUZZ
+Wire Wire Line
+	1600 4950 1650 4950
+Wire Wire Line
+	1650 5050 1600 5050
+Wire Wire Line
+	1600 5150 1650 5150
+Wire Wire Line
+	1650 5250 1600 5250
 $EndSCHEMATC
