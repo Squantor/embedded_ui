@@ -326,74 +326,74 @@ Wire Notes Line
 Wire Notes Line
 	1600 2450 1600 2600
 $Comp
-L SquantorNxp:PCF8574 U?
+L SquantorNxp:PCF8574 U3
 U 1 1 6200FB37
-P 1300 3250
-F 0 "U?" H 1300 3700 50  0000 C CNN
-F 1 "PCF8574" H 1300 2700 50  0000 C CNN
-F 2 "SquantorIC:SOT162-1-NXP" H 1330 3400 20  0001 C CNN
-F 3 "" H 1300 3250 60  0000 C CNN
-	1    1300 3250
+P 2000 3250
+F 0 "U3" H 2000 3700 50  0000 C CNN
+F 1 "PCF8574" H 2000 2700 50  0000 C CNN
+F 2 "SquantorIC:SOT162-1-NXP" H 2030 3400 20  0001 C CNN
+F 3 "" H 2000 3250 60  0000 C CNN
+	1    2000 3250
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C2
 U 1 1 62010A3A
-P 1050 4050
-F 0 "C?" V 1000 4150 50  0000 C CNN
-F 1 "1u" V 1100 4150 50  0000 C CNN
-F 2 "SquantorRcl:C_0603" H 1088 3900 50  0001 C CNN
-F 3 "~" H 1050 4050 50  0001 C CNN
-	1    1050 4050
+P 1750 4050
+F 0 "C2" V 1700 4150 50  0000 C CNN
+F 1 "1u" V 1800 4150 50  0000 C CNN
+F 2 "SquantorRcl:C_0603" H 1788 3900 50  0001 C CNN
+F 3 "~" H 1750 4050 50  0001 C CNN
+	1    1750 4050
 	0    -1   -1   0   
 $EndComp
-Text Label 950  3650 2    50   ~ 0
+Text Label 1650 3650 2    50   ~ 0
 VSS
-Text Label 1650 2950 0    50   ~ 0
+Text Label 2350 2950 0    50   ~ 0
 3.3V
-Text Label 1250 4050 0    50   ~ 0
+Text Label 1950 4050 0    50   ~ 0
 VSS
-Text Label 850  4050 2    50   ~ 0
+Text Label 1550 4050 2    50   ~ 0
 3.3V
 Wire Wire Line
-	850  4050 900  4050
+	1550 4050 1600 4050
 Wire Wire Line
-	1200 4050 1250 4050
+	1900 4050 1950 4050
 Wire Wire Line
-	950  3650 1000 3650
+	1650 3650 1700 3650
 Wire Wire Line
-	1600 2950 1650 2950
-Text Label 1650 3150 0    50   ~ 0
+	2300 2950 2350 2950
+Text Label 2350 3150 0    50   ~ 0
 SCL
-Text Label 1650 3050 0    50   ~ 0
+Text Label 2350 3050 0    50   ~ 0
 SDA
 Wire Wire Line
-	1650 3050 1600 3050
+	2350 3050 2300 3050
 Wire Wire Line
-	1600 3150 1650 3150
-Text Label 1650 3250 0    50   ~ 0
+	2300 3150 2350 3150
+Text Label 2350 3250 0    50   ~ 0
 !INT
 Wire Wire Line
-	1650 3250 1600 3250
-Text Notes 1500 4150 0    50   ~ 0
+	2350 3250 2300 3250
+Text Notes 2200 4150 0    50   ~ 0
 PCF expander
 Wire Notes Line
-	600  2700 2050 2700
+	600  2700 2750 2700
 Wire Notes Line
-	2050 2700 2050 4200
+	2750 2700 2750 4200
 Wire Notes Line
-	2050 4200 600  4200
+	2750 4200 600  4200
 Wire Notes Line
 	600  4200 600  2700
 Wire Notes Line
-	2050 4000 1450 4000
+	2750 4000 2150 4000
 Wire Notes Line
-	1450 4000 1450 4200
+	2150 4000 2150 4200
 $Comp
-L Device:R R?
+L Device:R R4
 U 1 1 6201B064
 P 1600 1400
-F 0 "R?" V 1550 1550 50  0000 C CNN
+F 0 "R4" V 1550 1550 50  0000 C CNN
 F 1 "4.7K" V 1600 1400 50  0000 C CNN
 F 2 "SquantorRcl:R_0603_hand" V 1530 1400 50  0001 C CNN
 F 3 "~" H 1600 1400 50  0001 C CNN
@@ -406,132 +406,550 @@ Text Label 1800 1400 0    50   ~ 0
 3.3V
 Wire Wire Line
 	1800 1400 1750 1400
-Text Label 950  3250 2    50   ~ 0
-BUTTON0
-Text Label 950  3350 2    50   ~ 0
-BUTTON1
-Text Label 950  3450 2    50   ~ 0
-BUTTON2
-Text Label 950  3550 2    50   ~ 0
-BUTTON3
+Text Label 1650 3250 2    50   ~ 0
+BUTT0
+Text Label 1650 3350 2    50   ~ 0
+BUTT1
+Text Label 1650 3450 2    50   ~ 0
+BUTT2
+Text Label 1650 3550 2    50   ~ 0
+BUTT3
 Wire Wire Line
-	950  3250 1000 3250
+	1650 3250 1700 3250
 Wire Wire Line
-	1000 3350 950  3350
+	1700 3350 1650 3350
 Wire Wire Line
-	950  3450 1000 3450
+	1650 3450 1700 3450
 Wire Wire Line
-	1000 3550 950  3550
-Text Label 1650 3650 0    50   ~ 0
-BUTTON4
-Text Label 1650 3550 0    50   ~ 0
-BUTTON4
-Text Label 1650 3450 0    50   ~ 0
-BUTTON4
-Text Label 1650 3350 0    50   ~ 0
+	1700 3550 1650 3550
+Text Label 2350 3350 0    50   ~ 0
 BUZZ
 Wire Wire Line
-	1600 3350 1650 3350
-Wire Wire Line
-	1650 3450 1600 3450
-Wire Wire Line
-	1600 3550 1650 3550
-Wire Wire Line
-	1650 3650 1600 3650
+	2300 3350 2350 3350
 $Comp
-L Device:C C?
+L Device:C C3
 U 1 1 620368EE
-P 1050 5650
-F 0 "C?" V 1000 5750 50  0000 C CNN
-F 1 "1u" V 1100 5750 50  0000 C CNN
-F 2 "SquantorRcl:C_0603" H 1088 5500 50  0001 C CNN
-F 3 "~" H 1050 5650 50  0001 C CNN
-	1    1050 5650
+P 1750 5650
+F 0 "C3" V 1700 5750 50  0000 C CNN
+F 1 "1u" V 1800 5750 50  0000 C CNN
+F 2 "SquantorRcl:C_0603" H 1788 5500 50  0001 C CNN
+F 3 "~" H 1750 5650 50  0001 C CNN
+	1    1750 5650
 	0    -1   -1   0   
 $EndComp
-Text Label 950  5250 2    50   ~ 0
+Text Label 1650 5250 2    50   ~ 0
 VSS
-Text Label 1650 4550 0    50   ~ 0
+Text Label 2350 4550 0    50   ~ 0
 3.3V
-Text Label 1250 5650 0    50   ~ 0
+Text Label 1950 5650 0    50   ~ 0
 VSS
-Text Label 850  5650 2    50   ~ 0
+Text Label 1550 5650 2    50   ~ 0
 3.3V
 Wire Wire Line
-	850  5650 900  5650
+	1550 5650 1600 5650
 Wire Wire Line
-	1200 5650 1250 5650
+	1900 5650 1950 5650
 Wire Wire Line
-	950  5250 1000 5250
+	1650 5250 1700 5250
 Wire Wire Line
-	1600 4550 1650 4550
-Text Label 1650 4750 0    50   ~ 0
+	2300 4550 2350 4550
+Text Label 2350 4750 0    50   ~ 0
 SCL
-Text Label 1650 4650 0    50   ~ 0
+Text Label 2350 4650 0    50   ~ 0
 SDA
 Wire Wire Line
-	1650 4650 1600 4650
+	2350 4650 2300 4650
 Wire Wire Line
-	1600 4750 1650 4750
-Text Label 1650 4850 0    50   ~ 0
+	2300 4750 2350 4750
+Text Label 2350 4850 0    50   ~ 0
 !INT
 Wire Wire Line
-	1650 4850 1600 4850
-Text Notes 1500 5750 0    50   ~ 0
+	2350 4850 2300 4850
+Text Notes 2200 5750 0    50   ~ 0
 PCF expander
 Wire Notes Line
-	600  4300 2050 4300
+	600  4300 2750 4300
 Wire Notes Line
-	2050 4300 2050 5800
+	2750 4300 2750 5800
 Wire Notes Line
-	2050 5800 600  5800
+	2750 5800 600  5800
 Wire Notes Line
 	600  5800 600  4300
 Wire Notes Line
-	2050 5600 1450 5600
+	2750 5600 2150 5600
 Wire Notes Line
-	1450 5600 1450 5800
-Text Label 950  4850 2    50   ~ 0
-BUTTON0
-Text Label 950  4950 2    50   ~ 0
-BUTTON1
-Text Label 950  5050 2    50   ~ 0
-BUTTON2
-Text Label 950  5150 2    50   ~ 0
-BUTTON3
+	2150 5600 2150 5800
+Text Label 1650 4850 2    50   ~ 0
+BUTT0
+Text Label 1650 4950 2    50   ~ 0
+BUTT1
+Text Label 1650 5050 2    50   ~ 0
+BUTT2
+Text Label 1650 5150 2    50   ~ 0
+BUTT3
 Wire Wire Line
-	950  4850 1000 4850
+	1650 4850 1700 4850
 Wire Wire Line
-	1000 4950 950  4950
+	1700 4950 1650 4950
 Wire Wire Line
-	950  5050 1000 5050
+	1650 5050 1700 5050
 Wire Wire Line
-	1000 5150 950  5150
-Text Label 1650 5250 0    50   ~ 0
-BUTTON4
-Text Label 1650 5150 0    50   ~ 0
-BUTTON4
-Text Label 1650 5050 0    50   ~ 0
-BUTTON4
-Text Label 1650 4950 0    50   ~ 0
+	1700 5150 1650 5150
+Text Label 2350 4950 0    50   ~ 0
 BUZZ
 Wire Wire Line
-	1600 4950 1650 4950
-Wire Wire Line
-	1650 5050 1600 5050
-Wire Wire Line
-	1600 5150 1650 5150
-Wire Wire Line
-	1650 5250 1600 5250
+	2300 4950 2350 4950
 $Comp
-L SquantorNxp:PCA9554 U?
+L SquantorNxp:PCA9554 U4
 U 1 1 620473E5
-P 1300 4800
-F 0 "U?" H 1300 5200 50  0000 C CNN
-F 1 "PCA9554" H 1300 4200 50  0000 C CNN
-F 2 "SquantorIC:SOT403-1-NXP" H 1300 4800 50  0001 C CNN
-F 3 "" H 1300 4800 50  0001 C CNN
-	1    1300 4800
+P 2000 4800
+F 0 "U4" H 2000 5200 50  0000 C CNN
+F 1 "PCA9554" H 2000 4200 50  0000 C CNN
+F 2 "SquantorIC:SOT403-1-NXP" H 2000 4800 50  0001 C CNN
+F 3 "" H 2000 4800 50  0001 C CNN
+	1    2000 4800
 	1    0    0    -1  
 $EndComp
+$Comp
+L SquantorSpecial:Solderjumper_3way_12conn JP1
+U 1 1 62013116
+P 1050 2950
+F 0 "JP1" H 1250 3050 50  0000 C CNN
+F 1 "A0" H 1250 2850 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_0603_3way_12conn" H 1050 2950 50  0001 C CNN
+F 3 "" H 1050 2950 50  0001 C CNN
+	1    1050 2950
+	1    0    0    -1  
+$EndComp
+Text Label 800  3050 2    50   ~ 0
+VSS
+Text Label 800  2850 2    50   ~ 0
+3.3V
+Wire Wire Line
+	800  2850 850  2850
+Wire Wire Line
+	850  3050 800  3050
+Wire Wire Line
+	1700 2950 1250 2950
+$Comp
+L SquantorSpecial:Solderjumper_3way_12conn JP2
+U 1 1 6204623C
+P 1050 3400
+F 0 "JP2" H 1250 3500 50  0000 C CNN
+F 1 "A1" H 1250 3300 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_0603_3way_12conn" H 1050 3400 50  0001 C CNN
+F 3 "" H 1050 3400 50  0001 C CNN
+	1    1050 3400
+	1    0    0    -1  
+$EndComp
+Text Label 800  3500 2    50   ~ 0
+VSS
+Text Label 800  3300 2    50   ~ 0
+3.3V
+Wire Wire Line
+	800  3300 850  3300
+Wire Wire Line
+	850  3500 800  3500
+Wire Wire Line
+	1700 3050 1300 3050
+Wire Wire Line
+	1300 3050 1300 3400
+Wire Wire Line
+	1300 3400 1250 3400
+$Comp
+L SquantorSpecial:Solderjumper_3way_12conn JP3
+U 1 1 6204D71C
+P 1050 3850
+F 0 "JP3" H 1250 3950 50  0000 C CNN
+F 1 "A2" H 1250 3750 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_0603_3way_12conn" H 1050 3850 50  0001 C CNN
+F 3 "" H 1050 3850 50  0001 C CNN
+	1    1050 3850
+	1    0    0    -1  
+$EndComp
+Text Label 800  3950 2    50   ~ 0
+VSS
+Text Label 800  3750 2    50   ~ 0
+3.3V
+Wire Wire Line
+	800  3750 850  3750
+Wire Wire Line
+	850  3950 800  3950
+Wire Wire Line
+	1700 3150 1350 3150
+Wire Wire Line
+	1350 3150 1350 3850
+Wire Wire Line
+	1350 3850 1250 3850
+$Comp
+L SquantorSpecial:Solderjumper_3way_12conn JP4
+U 1 1 620673A6
+P 1050 4550
+F 0 "JP4" H 1250 4650 50  0000 C CNN
+F 1 "A0" H 1250 4450 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_0603_3way_12conn" H 1050 4550 50  0001 C CNN
+F 3 "" H 1050 4550 50  0001 C CNN
+	1    1050 4550
+	1    0    0    -1  
+$EndComp
+Text Label 800  4650 2    50   ~ 0
+VSS
+Text Label 800  4450 2    50   ~ 0
+3.3V
+Wire Wire Line
+	800  4450 850  4450
+Wire Wire Line
+	850  4650 800  4650
+Wire Wire Line
+	1700 4550 1250 4550
+$Comp
+L SquantorSpecial:Solderjumper_3way_12conn JP5
+U 1 1 62067501
+P 1050 5000
+F 0 "JP5" H 1250 5100 50  0000 C CNN
+F 1 "A1" H 1250 4900 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_0603_3way_12conn" H 1050 5000 50  0001 C CNN
+F 3 "" H 1050 5000 50  0001 C CNN
+	1    1050 5000
+	1    0    0    -1  
+$EndComp
+Text Label 800  5100 2    50   ~ 0
+VSS
+Text Label 800  4900 2    50   ~ 0
+3.3V
+Wire Wire Line
+	800  4900 850  4900
+Wire Wire Line
+	850  5100 800  5100
+Wire Wire Line
+	1700 4650 1300 4650
+Wire Wire Line
+	1300 4650 1300 5000
+Wire Wire Line
+	1300 5000 1250 5000
+$Comp
+L SquantorSpecial:Solderjumper_3way_12conn JP6
+U 1 1 62067512
+P 1050 5450
+F 0 "JP6" H 1250 5550 50  0000 C CNN
+F 1 "A2" H 1250 5350 50  0000 C CNN
+F 2 "SquantorSpecial:solder_jumper_0603_3way_12conn" H 1050 5450 50  0001 C CNN
+F 3 "" H 1050 5450 50  0001 C CNN
+	1    1050 5450
+	1    0    0    -1  
+$EndComp
+Text Label 800  5550 2    50   ~ 0
+VSS
+Text Label 800  5350 2    50   ~ 0
+3.3V
+Wire Wire Line
+	800  5350 850  5350
+Wire Wire Line
+	850  5550 800  5550
+Wire Wire Line
+	1700 4750 1350 4750
+Wire Wire Line
+	1350 4750 1350 5450
+Wire Wire Line
+	1350 5450 1250 5450
+$Comp
+L SquantorSwitches:4pin_tact_switch S1
+U 1 1 6207D97C
+P 2050 6400
+F 0 "S1" H 2050 6500 60  0000 C CNN
+F 1 "BUT0" H 2050 6300 60  0000 C CNN
+F 2 "SquantorSwitches:Omron_B3F-4055" H 2050 6400 60  0001 C CNN
+F 3 "" H 2050 6400 60  0001 C CNN
+	1    2050 6400
+	1    0    0    -1  
+$EndComp
+Text Label 1350 6350 2    50   ~ 0
+BUTT0
+Wire Wire Line
+	1850 6350 1800 6350
+Wire Wire Line
+	1850 6450 1800 6450
+Wire Wire Line
+	1800 6350 1800 6450
+$Comp
+L Device:R R6
+U 1 1 62086745
+P 2000 6150
+F 0 "R6" V 1950 6300 50  0000 C CNN
+F 1 "4.7K" V 2000 6150 50  0000 C CNN
+F 2 "SquantorRcl:R_0603_hand" V 1930 6150 50  0001 C CNN
+F 3 "~" H 2000 6150 50  0001 C CNN
+	1    2000 6150
+	0    1    1    0   
+$EndComp
+Text Label 2200 6150 0    50   ~ 0
+3.3V
+Wire Wire Line
+	2200 6150 2150 6150
+Wire Wire Line
+	1850 6150 1800 6150
+Wire Wire Line
+	1800 6150 1800 6350
+Connection ~ 1800 6350
+Text Label 2300 6400 0    50   ~ 0
+VSS
+Wire Wire Line
+	2250 6350 2300 6350
+Wire Wire Line
+	2300 6350 2300 6450
+Wire Wire Line
+	2300 6450 2250 6450
+$Comp
+L Device:R R5
+U 1 1 6209944C
+P 1600 6350
+F 0 "R5" V 1550 6500 50  0000 C CNN
+F 1 "100" V 1600 6350 50  0000 C CNN
+F 2 "SquantorRcl:R_0603_hand" V 1530 6350 50  0001 C CNN
+F 3 "~" H 1600 6350 50  0001 C CNN
+	1    1600 6350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 6350 1750 6350
+$Comp
+L Device:C C4
+U 1 1 6209D977
+P 1600 6050
+F 0 "C4" V 1650 6150 50  0000 C CNN
+F 1 "100n" V 1550 6200 50  0000 C CNN
+F 2 "SquantorRcl:C_0603" H 1638 5900 50  0001 C CNN
+F 3 "~" H 1600 6050 50  0001 C CNN
+	1    1600 6050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1450 6050 1400 6050
+$Comp
+L Device:D_TVS D1
+U 1 1 620A98A3
+P 1600 6200
+F 0 "D1" H 1450 6250 50  0000 C CNN
+F 1 "SD05" H 1400 6150 50  0000 C CNN
+F 2 "SquantorDiodes:SOD_323_onsemi" H 1600 6200 50  0001 C CNN
+F 3 "~" H 1600 6200 50  0001 C CNN
+	1    1600 6200
+	1    0    0    -1  
+$EndComp
+Text Label 1750 6050 0    50   ~ 0
+VSS
+Wire Wire Line
+	1750 6050 1750 6200
+Wire Wire Line
+	1450 6200 1400 6200
+Wire Wire Line
+	1400 6200 1400 6050
+Wire Wire Line
+	1350 6350 1400 6350
+Wire Wire Line
+	1400 6200 1400 6350
+Connection ~ 1400 6200
+Connection ~ 1400 6350
+Wire Wire Line
+	1400 6350 1450 6350
+$Comp
+L SquantorSwitches:4pin_tact_switch S2
+U 1 1 620D8F7F
+P 2050 6900
+F 0 "S2" H 2050 7000 60  0000 C CNN
+F 1 "BUT1" H 2050 6800 60  0000 C CNN
+F 2 "SquantorSwitches:Omron_B3F-4055" H 2050 6900 60  0001 C CNN
+F 3 "" H 2050 6900 60  0001 C CNN
+	1    2050 6900
+	1    0    0    -1  
+$EndComp
+Text Label 1350 6850 2    50   ~ 0
+BUTT1
+Wire Wire Line
+	1850 6850 1800 6850
+Wire Wire Line
+	1850 6950 1800 6950
+Wire Wire Line
+	1800 6850 1800 6950
+$Comp
+L Device:R R9
+U 1 1 620D90DD
+P 2000 6650
+F 0 "R9" V 1950 6800 50  0000 C CNN
+F 1 "4.7K" V 2000 6650 50  0000 C CNN
+F 2 "SquantorRcl:R_0603_hand" V 1930 6650 50  0001 C CNN
+F 3 "~" H 2000 6650 50  0001 C CNN
+	1    2000 6650
+	0    1    1    0   
+$EndComp
+Text Label 2200 6650 0    50   ~ 0
+3.3V
+Wire Wire Line
+	2200 6650 2150 6650
+Wire Wire Line
+	1850 6650 1800 6650
+Wire Wire Line
+	1800 6650 1800 6850
+Connection ~ 1800 6850
+Text Label 2300 6900 0    50   ~ 0
+VSS
+Wire Wire Line
+	2250 6850 2300 6850
+Wire Wire Line
+	2300 6850 2300 6950
+Wire Wire Line
+	2300 6950 2250 6950
+$Comp
+L Device:R R7
+U 1 1 620D90F0
+P 1600 6850
+F 0 "R7" V 1550 7000 50  0000 C CNN
+F 1 "100" V 1600 6850 50  0000 C CNN
+F 2 "SquantorRcl:R_0603_hand" V 1530 6850 50  0001 C CNN
+F 3 "~" H 1600 6850 50  0001 C CNN
+	1    1600 6850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 6850 1750 6850
+$Comp
+L Device:C C5
+U 1 1 620D90FB
+P 1600 6550
+F 0 "C5" V 1650 6650 50  0000 C CNN
+F 1 "100n" V 1550 6700 50  0000 C CNN
+F 2 "SquantorRcl:C_0603" H 1638 6400 50  0001 C CNN
+F 3 "~" H 1600 6550 50  0001 C CNN
+	1    1600 6550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1450 6550 1400 6550
+$Comp
+L Device:D_TVS D2
+U 1 1 620D9106
+P 1600 6700
+F 0 "D2" H 1450 6750 50  0000 C CNN
+F 1 "SD05" H 1400 6650 50  0000 C CNN
+F 2 "SquantorDiodes:SOD_323_onsemi" H 1600 6700 50  0001 C CNN
+F 3 "~" H 1600 6700 50  0001 C CNN
+	1    1600 6700
+	1    0    0    -1  
+$EndComp
+Text Label 1750 6550 0    50   ~ 0
+VSS
+Wire Wire Line
+	1750 6550 1750 6700
+Wire Wire Line
+	1450 6700 1400 6700
+Wire Wire Line
+	1400 6700 1400 6550
+Wire Wire Line
+	1350 6850 1400 6850
+Wire Wire Line
+	1400 6700 1400 6850
+Connection ~ 1400 6700
+Connection ~ 1400 6850
+Wire Wire Line
+	1400 6850 1450 6850
+$Comp
+L SquantorSwitches:4pin_tact_switch S3
+U 1 1 620E4A59
+P 2050 7400
+F 0 "S3" H 2050 7500 60  0000 C CNN
+F 1 "BUT2" H 2050 7300 60  0000 C CNN
+F 2 "SquantorSwitches:Omron_B3F-4055" H 2050 7400 60  0001 C CNN
+F 3 "" H 2050 7400 60  0001 C CNN
+	1    2050 7400
+	1    0    0    -1  
+$EndComp
+Text Label 1350 7350 2    50   ~ 0
+BUTT2
+Wire Wire Line
+	1850 7350 1800 7350
+Wire Wire Line
+	1850 7450 1800 7450
+Wire Wire Line
+	1800 7350 1800 7450
+$Comp
+L Device:R R10
+U 1 1 620E4BDB
+P 2000 7150
+F 0 "R10" V 1950 7300 50  0000 C CNN
+F 1 "4.7K" V 2000 7150 50  0000 C CNN
+F 2 "SquantorRcl:R_0603_hand" V 1930 7150 50  0001 C CNN
+F 3 "~" H 2000 7150 50  0001 C CNN
+	1    2000 7150
+	0    1    1    0   
+$EndComp
+Text Label 2200 7150 0    50   ~ 0
+3.3V
+Wire Wire Line
+	2200 7150 2150 7150
+Wire Wire Line
+	1850 7150 1800 7150
+Wire Wire Line
+	1800 7150 1800 7350
+Connection ~ 1800 7350
+Text Label 2300 7400 0    50   ~ 0
+VSS
+Wire Wire Line
+	2250 7350 2300 7350
+Wire Wire Line
+	2300 7350 2300 7450
+Wire Wire Line
+	2300 7450 2250 7450
+$Comp
+L Device:R R8
+U 1 1 620E4BEE
+P 1600 7350
+F 0 "R8" V 1550 7500 50  0000 C CNN
+F 1 "100" V 1600 7350 50  0000 C CNN
+F 2 "SquantorRcl:R_0603_hand" V 1530 7350 50  0001 C CNN
+F 3 "~" H 1600 7350 50  0001 C CNN
+	1    1600 7350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 7350 1750 7350
+$Comp
+L Device:C C6
+U 1 1 620E4BF9
+P 1600 7050
+F 0 "C6" V 1650 7150 50  0000 C CNN
+F 1 "100n" V 1550 7200 50  0000 C CNN
+F 2 "SquantorRcl:C_0603" H 1638 6900 50  0001 C CNN
+F 3 "~" H 1600 7050 50  0001 C CNN
+	1    1600 7050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1450 7050 1400 7050
+$Comp
+L Device:D_TVS D3
+U 1 1 620E4C04
+P 1600 7200
+F 0 "D3" H 1450 7250 50  0000 C CNN
+F 1 "SD05" H 1400 7150 50  0000 C CNN
+F 2 "SquantorDiodes:SOD_323_onsemi" H 1600 7200 50  0001 C CNN
+F 3 "~" H 1600 7200 50  0001 C CNN
+	1    1600 7200
+	1    0    0    -1  
+$EndComp
+Text Label 1750 7050 0    50   ~ 0
+VSS
+Wire Wire Line
+	1750 7050 1750 7200
+Wire Wire Line
+	1450 7200 1400 7200
+Wire Wire Line
+	1400 7200 1400 7050
+Wire Wire Line
+	1350 7350 1400 7350
+Wire Wire Line
+	1400 7200 1400 7350
+Connection ~ 1400 7200
+Connection ~ 1400 7350
+Wire Wire Line
+	1400 7350 1450 7350
 $EndSCHEMATC
