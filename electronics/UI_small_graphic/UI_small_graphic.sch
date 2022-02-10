@@ -953,10 +953,10 @@ Connection ~ 900  7350
 Wire Wire Line
 	900  7350 950  7350
 $Comp
-L Device:Buzzer BZ?
+L Device:Buzzer BZ1
 U 1 1 62071357
 P 2550 6150
-F 0 "BZ?" H 2350 6150 50  0000 L CNN
+F 0 "BZ1" H 2350 6150 50  0000 L CNN
 F 1 "Buzzer" H 2400 6000 50  0000 L CNN
 F 2 "Buzzer_Beeper:Buzzer_12x9.5RM7.6" V 2525 6250 50  0001 C CNN
 F 3 "~" V 2525 6250 50  0001 C CNN
@@ -966,10 +966,10 @@ $EndComp
 Wire Wire Line
 	2400 6050 2450 6050
 $Comp
-L Device:R R?
+L Device:R R11
 U 1 1 62078D8D
 P 2250 6250
-F 0 "R?" V 2200 6400 50  0000 C CNN
+F 0 "R11" V 2200 6400 50  0000 C CNN
 F 1 "TBD" V 2250 6250 50  0000 C CNN
 F 2 "SquantorRcl:R_0603_hand" V 2180 6250 50  0001 C CNN
 F 3 "~" H 2250 6250 50  0001 C CNN
@@ -984,4 +984,14 @@ Wire Wire Line
 	2050 6250 2100 6250
 Wire Wire Line
 	2400 6250 2450 6250
+Wire Notes Line
+	2750 5900 600  5900
+Wire Notes Line
+	600  5900 600  7600
+Wire Notes Line
+	600  7600 2750 7600
+Wire Notes Line
+	2750 7600 2750 5900
+Text Notes 2050 7550 0    50   ~ 0
+Buttons & buzzer
 $EndSCHEMATC
