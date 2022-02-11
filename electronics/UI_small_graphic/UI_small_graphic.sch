@@ -260,71 +260,71 @@ Wire Notes Line
 $Comp
 L SquantorModules:I2C_OLED U2
 U 1 1 61FAB558
-P 1800 2100
-F 0 "U2" H 1750 2400 50  0000 L CNN
-F 1 "128x64" H 1650 1800 50  0000 L CNN
-F 2 "SquantorModules:OLED_128x64" H 1750 2100 50  0001 C CNN
-F 3 "" H 1750 2100 50  0001 C CNN
-	1    1800 2100
+P 2550 2100
+F 0 "U2" H 2500 2400 50  0000 L CNN
+F 1 "128x64" H 2400 1800 50  0000 L CNN
+F 2 "SquantorModules:OLED_128x64" H 2500 2100 50  0001 C CNN
+F 3 "" H 2500 2100 50  0001 C CNN
+	1    2550 2100
 	1    0    0    -1  
 $EndComp
 $Comp
 L SquantorModules:I2C_OLED U1
 U 1 1 61FAC7CD
-P 1150 2100
-F 0 "U1" H 1100 2400 50  0000 L CNN
-F 1 "128x32" H 1000 1800 50  0000 L CNN
-F 2 "SquantorModules:OLED_128x32" H 1100 2100 50  0001 C CNN
-F 3 "" H 1100 2100 50  0001 C CNN
-	1    1150 2100
+P 1900 2100
+F 0 "U1" H 1850 2400 50  0000 L CNN
+F 1 "128x32" H 1750 1800 50  0000 L CNN
+F 2 "SquantorModules:OLED_128x32" H 1850 2100 50  0001 C CNN
+F 3 "" H 1850 2100 50  0001 C CNN
+	1    1900 2100
 	1    0    0    -1  
 $EndComp
-Text Label 850  2150 2    50   ~ 0
+Text Label 1600 2150 2    50   ~ 0
 SCL
-Text Label 850  2250 2    50   ~ 0
+Text Label 1600 2250 2    50   ~ 0
 SDA
-Text Label 1500 2150 2    50   ~ 0
+Text Label 2250 2150 2    50   ~ 0
 SCL
-Text Label 1500 2250 2    50   ~ 0
+Text Label 2250 2250 2    50   ~ 0
 SDA
-Text Label 1500 1950 2    50   ~ 0
+Text Label 2250 1950 2    50   ~ 0
 VSS
-Text Label 1500 2050 2    50   ~ 0
+Text Label 2250 2050 2    50   ~ 0
 3.3V
-Text Label 850  1950 2    50   ~ 0
+Text Label 1600 1950 2    50   ~ 0
 VSS
-Text Label 850  2050 2    50   ~ 0
+Text Label 1600 2050 2    50   ~ 0
 3.3V
 Wire Wire Line
-	850  1950 900  1950
+	1600 1950 1650 1950
 Wire Wire Line
-	900  2050 850  2050
+	1650 2050 1600 2050
 Wire Wire Line
-	850  2150 900  2150
+	1600 2150 1650 2150
 Wire Wire Line
-	900  2250 850  2250
+	1650 2250 1600 2250
 Wire Wire Line
-	1500 1950 1550 1950
+	2250 1950 2300 1950
 Wire Wire Line
-	1550 2050 1500 2050
+	2300 2050 2250 2050
 Wire Wire Line
-	1500 2150 1550 2150
+	2250 2150 2300 2150
 Wire Wire Line
-	1550 2250 1500 2250
-Text Notes 1650 2550 0    50   ~ 0
+	2300 2250 2250 2250
+Text Notes 2350 2550 0    50   ~ 0
 Displays
 Wire Notes Line
-	2050 1700 600  1700
+	2750 1700 600  1700
 Wire Notes Line
 	600  1700 600  2600
 Wire Notes Line
-	600  2600 2050 2600
+	600  2600 2750 2600
 Wire Notes Line
-	2050 1700 2050 2600
+	2750 1700 2750 2600
 Wire Notes Line
-	2050 2450 1600 2450
+	2750 2450 2300 2450
 Wire Notes Line
-	1600 2450 1600 2600
+	2300 2450 2300 2600
 $Comp
 L SquantorNxp:PCF8574 U3
 U 1 1 6200FB37
@@ -994,4 +994,42 @@ Wire Notes Line
 	2750 7600 2750 5900
 Text Notes 2050 7550 0    50   ~ 0
 Buttons & buzzer
+$Comp
+L Device:C C7
+U 1 1 62108B93
+P 1000 2050
+F 0 "C7" V 950 2150 50  0000 C CNN
+F 1 "10u" V 1050 2150 50  0000 C CNN
+F 2 "SquantorRcl:C_0603" H 1038 1900 50  0001 C CNN
+F 3 "~" H 1000 2050 50  0001 C CNN
+	1    1000 2050
+	0    1    1    0   
+$EndComp
+Text Label 1200 2050 0    50   ~ 0
+VSS
+Text Label 800  2050 2    50   ~ 0
+3.3V
+Wire Wire Line
+	850  2050 800  2050
+Wire Wire Line
+	1150 2050 1200 2050
+$Comp
+L Device:C C8
+U 1 1 6212D4D5
+P 1000 2250
+F 0 "C8" V 950 2350 50  0000 C CNN
+F 1 "10u" V 1050 2350 50  0000 C CNN
+F 2 "SquantorRcl:C_0603" H 1038 2100 50  0001 C CNN
+F 3 "~" H 1000 2250 50  0001 C CNN
+	1    1000 2250
+	0    1    1    0   
+$EndComp
+Text Label 1200 2250 0    50   ~ 0
+VSS
+Text Label 800  2250 2    50   ~ 0
+3.3V
+Wire Wire Line
+	850  2250 800  2250
+Wire Wire Line
+	1150 2250 1200 2250
 $EndSCHEMATC
