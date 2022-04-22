@@ -2,14 +2,15 @@
 # Copyright (c) 2021 Bart Bilos
 # For conditions of distribution and use, see LICENSE file
 
-# settings for the a generic Cortex M3 microcontroller
+# settings for the LPC812 Microcontroller
 
 # Version: 20201220
 
 # import compiler settings for the core in this microcontroller
-include targets/core_CortexM3.mk
+include targets/core_CortexM0.mk
 
 # Specific C files and linker scripts
-FILES += targets/src/core_CortexM3.cpp targets/src/startup.cpp
+FILES += targets/src/STM32F031K6.cpp targets/src/startup.cpp
 DEFINES += -DMCU_$(MCU)
-LDSCRIPT = -T"targets/ld/core_CortexMgeneric.ld"
+LDSCRIPT = -T"targets/ld/STM32F031K6.ld"
+
