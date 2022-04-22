@@ -26,7 +26,8 @@
 
 # includes of additional libraries
 include squantorLibC/squantorLibC.mk
-include squantorLibEmbeddedC/squantorLibEmbeddedC.mk
+include squantorLibEmbedded/squantorLibEmbedded.mk
+include libMcuLL/libMcuLL.mk
 
 # project settings
 PROJECT = embedded_ui
@@ -40,7 +41,7 @@ $(PROJECT)/src/strings.cpp \
 common/src/stream_uart.cpp \
 $(PROJECT)/src/$(BOARD).cpp
 
-LIBS += -lgcc
-INCLUDES += -IlibMcuLL/inc -I$(PROJECT)/inc -IsquantorLibC/inc -IsquantorLibEmbeddedC/inc -Icommon/inc
+LIBS +=
+INCLUDES += -I$(PROJECT)/inc -Icommon/inc
 
 
