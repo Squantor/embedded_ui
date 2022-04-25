@@ -19,7 +19,7 @@ For conditions of distribution and use, see LICENSE file
 #define IOCON_UART_TX IOCON_PIO0_26
 #define SWM_UART_TX SWM_PORTPIN_P0_26
 #define IOCON_UART_RX IOCON_PIO0_27
-#define SWM_UART_RX (SWM_PORTPIN_P0_27
+#define SWM_UART_RX SWM_PORTPIN_P0_27
 
 #define UART_DEBUG USART0
 #define UART_DEBUG_SPEED (115200u)

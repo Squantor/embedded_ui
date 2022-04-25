@@ -4,8 +4,7 @@ SPDX-License-Identifier: MIT
 Copyright (c) 2022 Bart Bilos
 For conditions of distribution and use, see LICENSE file
 */
-#include <embedded_ui_mini.hpp>>
-
+#include <embedded_ui_mini.hpp>
 
 void crudeDelay(uint32_t iterations) {
   for (uint32_t i = iterations; i > 0; i--) {
@@ -48,9 +47,8 @@ void boardInit(void) {
   sysconMainClockSelect(SYSCON, MAINCLKSEL_PLL_OUT);
 
   // setup debug output uart
-  UartConfigData(UART_DEBUG, UART_CFG_DATALEN_8 | UART_CFG_PARITY_NONE | UART_CFG_STOPLEN_1);
-  ClockSetUSARTNBaseClockRate((UART_DEBUG_SPEED * 16), true);
-  UartSetBaud(UART_DEBUG, UART_DEBUG_SPEED);
-  UartEnable(UART_DEBUG);
-  UartTXEnable(UART_DEBUG);
+  sysconUartClockDiv(SYSCON, UART_DEBUG_SPEED);
+  usartSetBaud(USART0, CLOCK_AHB, 9600);
+  usartSetConfig(UART_DEBUG, DATALEN_8, PARITY_NONE, STOPLEN_1, 0);
+  usartTXEnable(UART_DEBUG);
 }
