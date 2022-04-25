@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "debug embedded UI mini",
+            "name": "Debug embedded ui mini",
             "cwd": "${workspaceRoot}",
             "executable": "${workspaceFolder}/bin/embedded_ui_mini/debug/embedded_ui_mini.elf",
             "request": "launch",
@@ -16,20 +16,11 @@
             "BMPGDBSerialPort": "/dev/ttyACM0",
             "runToEntryPoint": "main",
             "preLaunchCommands": [],
-            "preRestartCommands": [
-                "set print pretty on",
-                "file bin/embedded_ui_mini/debug/embedded_ui_mini.elf",
-                "monitor swdp_scan",
-                "attach 1",
-                "set mem inaccessible-by-default off",
-                "set {int}0x40048000 = 2",
-                "load bin/embedded_ui_mini/debug/embedded_ui_mini.elf",
-                "set {int}0x40048000 = 2",
-                "compare-sections",
-                "b main",
-            ],
-            "preLaunchTask": "build embedded UI mini",
-            "svdFile": "${workspaceFolder}/libMcuLL/svd/nxp/LPC824.svd"
+            "preRestartCommands": [],
+            "preLaunchTask": "build embedded ui mini",
+            "svdFile": "${workspaceFolder}/libMcuLL/svd/nxp/LPC824.svd",
+            "debuggerArgs": ["--command=${workspaceFolder}/gdb_scripts/embedded_ui_mini_debug.txt"],
+            "gdbpath": "/home/abilos/programs/gcc-arm-none-eabi-10-2020-q4-major/bin//arm-none-eabi-gdb"
         },
     ]
 }
