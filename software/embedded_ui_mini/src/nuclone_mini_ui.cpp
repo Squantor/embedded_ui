@@ -49,8 +49,8 @@ void boardInit(void) {
   sysconMainClockSelect(SYSCON, MAINCLKSEL_PLL_OUT);
 
   // setup debug output uart
-  sysconUartClockDiv(SYSCON, 2);
-  usartSetBaud(USART0, CLOCK_AHB, UART_DEBUG_SPEED);
+  sysconUartClockDiv(SYSCON, UART_CLOCK_DIVIDER);
+  usartSetBaud(USART0, CLOCK_MAIN / UART_CLOCK_DIVIDER, UART_DEBUG_SPEED);
   usartSetConfig(UART_DEBUG, DATALEN_8, PARITY_NONE, STOPLEN_1, 0);
   usartTXEnable(UART_DEBUG);
 

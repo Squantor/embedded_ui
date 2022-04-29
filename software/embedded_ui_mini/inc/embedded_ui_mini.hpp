@@ -28,6 +28,7 @@ For conditions of distribution and use, see LICENSE file
 
 #define UART_DEBUG USART0
 #define UART_DEBUG_SPEED (115200u)
+#define UART_CLOCK_DIVIDER (2u)
 
 #define TICKS_PER_S 4
 
