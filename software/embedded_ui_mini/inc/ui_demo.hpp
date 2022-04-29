@@ -14,6 +14,7 @@ struct uiDemo {
   ~uiDemo() = default;
   void init(void);
   void handleTick(void);
+  void handleButton(void);
   uint32_t runs;
 };
 

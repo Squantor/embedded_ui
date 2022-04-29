@@ -51,3 +51,9 @@ void uiDemo::handleTick(void) {
   currentDisplay.sendCommands(&invertDisplay, sizeof(invertDisplay));
   runs++;
 }
+
+void uiDemo::handleButton(void)
+{
+  // read out I2C port expander
+  // change uiDemo state according to button press
+}
