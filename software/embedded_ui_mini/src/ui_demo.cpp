@@ -33,14 +33,14 @@ const datastreamChar_t displayStream{
   .name = NULL,
 };
 
-void uiDemoInit(void) {
+void uiDemo::init(void) {
   dsPuts(&streamUart, strHello);
   currentDisplay.init(SSD1306::init128x64, sizeof(SSD1306::init128x64));
   dsPuts(&displayStream, "Hello World!");
+  runs = 0;
 }
 
-void uiDemoRun(void) {
-  static uint32_t runs = 0;
+void uiDemo::handleTick(void) {
   printDecNzU32(&displayStream, runs);
   dsWriteChar(&displayStream, runs & 0x7F);
   uint8_t invertDisplay;

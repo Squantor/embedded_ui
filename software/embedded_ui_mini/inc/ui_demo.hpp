@@ -9,11 +9,13 @@ For conditions of distribution and use, see LICENSE file
 
 #include <stdint.h>
 
-/**
- * @brief
- *
- */
-void uiDemoInit(void);
+struct uiDemo {
+  uiDemo() = default;
+  ~uiDemo() = default;
+  void init(void);
+  void handleTick(void);
+  uint32_t runs;
+};
 
 /**
  * @brief

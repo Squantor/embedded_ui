@@ -17,9 +17,9 @@ void SysTick_Handler(void) {
 
 int main() {
   boardInit();
-  uiDemoInit();
+  applicationInit();
   while (1) {
-    processApplicationEvents();
+    applicationProcessEvents();
     __WFI();
   }
 }

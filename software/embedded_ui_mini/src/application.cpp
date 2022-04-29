@@ -8,12 +8,13 @@ For conditions of distribution and use, see LICENSE file
 #include <application.hpp>
 #include <ui_demo.hpp>
 
-uint32_t events;
+uint32_t events;    /*!< Application events */
+uiDemo application; /*!< main application object */
 
-void processEvent(miniUiEvents event) {
+static void processEvent(miniUiEvents event) {
   switch (event) {
     case miniUiEvents::eventTick:
-      uiDemoRun();
+      application.handleTick();
       break;
 
     default:
@@ -21,7 +22,11 @@ void processEvent(miniUiEvents event) {
   }
 }
 
-void processApplicationEvents(void) {
+void applicationInit(void) {
+  application.init();
+}
+
+void applicationProcessEvents(void) {
   uint32_t mask = 1;
   // loop until all events have been processed
   do {
