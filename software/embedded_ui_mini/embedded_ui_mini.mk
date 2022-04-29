@@ -20,7 +20,9 @@ BOARD = nuclone_mini_ui
 FILES += $(PROJECT)/src/main.cpp \
 $(PROJECT)/src/strings.cpp \
 common/src/stream_uart.cpp \
-$(PROJECT)/src/$(BOARD).cpp
+$(PROJECT)/src/$(BOARD).cpp \
+$(PROJECT)/src/application.cpp \
+$(PROJECT)/src/ui_demo.cpp
 
 INCLUDES += -I$(PROJECT)/inc -Icommon/inc
 
