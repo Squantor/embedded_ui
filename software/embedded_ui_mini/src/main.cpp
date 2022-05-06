@@ -13,6 +13,11 @@ extern "C" {
 void SysTick_Handler(void) {
   postEvent(eventTick);
 }
+
+void PIN_INT0_IRQHandler(void) {
+  pinintClearIntStatus(PININT, PININT_BUTTON_INT);
+  postEvent(eventExpInt);
+}
 }
 
 int main() {

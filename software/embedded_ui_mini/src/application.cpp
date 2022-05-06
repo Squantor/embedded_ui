@@ -7,6 +7,7 @@ For conditions of distribution and use, see LICENSE file
 #include <events.hpp>
 #include <application.hpp>
 #include <ui_demo.hpp>
+#include <embedded_ui_mini.hpp>
 
 uint32_t events;    /*!< Application events */
 uiDemo application; /*!< main application object */
@@ -16,8 +17,12 @@ static void processEvent(miniUiEvents event) {
     case miniUiEvents::eventTick:
       application.handleTick();
       break;
+    case miniUiEvents::eventExpInt:
+      boardReadIoExpander();
+      break;
 
     default:
+      __BKPT(1);
       break;
   }
 }

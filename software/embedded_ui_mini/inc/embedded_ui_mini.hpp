@@ -13,6 +13,8 @@ For conditions of distribution and use, see LICENSE file
 #define CLOCK_AHB (30000000u)
 #define CLOCK_MAIN (60000000u)
 
+#include <mcu_ll.h>
+
 #define IOCON_XTAL_IN IOCON_PIO0_8
 #define IOCON_XTAL_OUT IOCON_PIO0_9
 
@@ -26,12 +28,25 @@ For conditions of distribution and use, see LICENSE file
 #define IOCON_I2C_SDA IOCON_PIO0_11
 #define SWM_I2C_SDA SWM_PORTPIN_P0_11
 
+#define IOCON_BUTTON_INT IOCON_PIO0_16
+#define SWM_BUTTON_INT SWM_PORTPIN_P0_16
+#define PORT_BUTTON_INT GPIO_PORT0
+#define PIN_BUTTON_INT GPIO_PIO0_16
+
 #define UART_DEBUG USART0
 #define UART_DEBUG_SPEED (115200u)
 #define UART_CLOCK_DIVIDER (2u)
 
+#define PININT_BUTTON_INT PININT_CHAN0
+
+#define I2C_EXPANDER_ADDR (0x4E)
+
 #define TICKS_PER_S 4
 
-#include <mcu_ll.h>
+/**
+ * @brief Event to read out the IO expander
+ *
+ */
+void boardReadIoExpander(void);
 
 #endif

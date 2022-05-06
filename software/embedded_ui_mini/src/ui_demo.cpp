@@ -52,8 +52,7 @@ void uiDemo::handleTick(void) {
   runs++;
 }
 
-void uiDemo::handleButton(void)
-{
-  // read out I2C port expander
-  // change uiDemo state according to button press
+void uiDemo::handleButton(void) {
+  // called when the IO expander is read out and passes the buttons
+  // TODO maybe make button event enum? or just next/prev/enter passing?
 }

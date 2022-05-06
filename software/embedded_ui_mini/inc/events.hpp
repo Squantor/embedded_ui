@@ -14,9 +14,9 @@ For conditions of distribution and use, see LICENSE file
  *
  */
 enum miniUiEvents : uint32_t {
-  eventNone = 0x00000000,   /*!< No events present */
-  eventTick = 0x00000001,   /*!< Timer tick event */
-  eventButton = 0x00000002, /*!< Button press */
+  eventNone = (0 << 0),   /*!< No events present */
+  eventTick = (1 << 0),   /*!< Timer tick event */
+  eventExpInt = (1 << 1), /*!< I/O expander interrupt */
 };
 
 extern uint32_t events;

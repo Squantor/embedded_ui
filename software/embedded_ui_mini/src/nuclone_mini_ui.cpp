@@ -5,6 +5,7 @@ Copyright (c) 2022 Bart Bilos
 For conditions of distribution and use, see LICENSE file
 */
 #include <embedded_ui_mini.hpp>
+#include <events.hpp>
 
 void crudeDelay(uint32_t iterations) {
   for (uint32_t i = iterations; i > 0; i--) {
@@ -57,7 +58,28 @@ void boardInit(void) {
   // setup i2c
   i2cSetClockDivider(I2C0, 3);
   i2cSetConfiguration(I2C0, I2C_CFG_MSTEN);
+  i2cSetTimeout(I2C0, 4);
+
+  // setup button interrupt
+  sysconPinInterruptSelect(SYSCON, PININT0, PIN_BUTTON_INT);
+  pinintSetPinModeEdge(PININT, PININT_BUTTON_INT);
+  pinintEnableIntLow(PININT, PININT_BUTTON_INT);
+  NVIC_ClearPendingIRQ(PININT0_IRQn);
+  NVIC_EnableIRQ(PININT0_IRQn);
 
   // setup systick
   SysTick_Config(CLOCK_AHB / TICKS_PER_S);
+}
+
+void boardReadIoExpander(void) {
+  uint32_t masterStatus;
+  // readout IO/expander and post event that the buttons have been read out
+  i2cSetMasterData(I2C0, 0x00);
+  do {
+    masterStatus = i2cGetStatus(I2C0);
+  } while (((masterStatus & I2C_STAT_MSTPENDING) == 0));
+  // i2cSetMasterData(I2C0, 0x5A);
+  // i2cSetMasterControl(I2C0, I2C_MSCTL_MSTCONTINUE);
+
+  // call UI to update if comms went okay
 }
