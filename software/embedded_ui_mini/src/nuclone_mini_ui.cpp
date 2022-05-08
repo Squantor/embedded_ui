@@ -6,6 +6,7 @@ For conditions of distribution and use, see LICENSE file
 */
 #include <embedded_ui_mini.hpp>
 #include <events.hpp>
+#include <application.hpp>
 
 void crudeDelay(uint32_t iterations) {
   for (uint32_t i = iterations; i > 0; i--) {
@@ -72,14 +73,14 @@ void boardInit(void) {
 }
 
 void boardReadIoExpander(void) {
-  uint32_t masterStatus;
+  uint32_t i2cStatus = 0;
   // readout IO/expander and post event that the buttons have been read out
-  i2cSetMasterData(I2C0, 0x00);
+  i2cSetMasterData(I2C0, I2C_ADDR_READ(I2C_EXPANDER_ADDR));
+  i2cSetMasterControl(I2C0, I2C_MSCTL_MSTSTART);
   do {
-    masterStatus = i2cGetStatus(I2C0);
-  } while (((masterStatus & I2C_STAT_MSTPENDING) == 0));
-  // i2cSetMasterData(I2C0, 0x5A);
-  // i2cSetMasterControl(I2C0, I2C_MSCTL_MSTCONTINUE);
-
-  // call UI to update if comms went okay
+    i2cStatus = i2cGetStatus(I2C0);
+  } while ((i2cStatus & I2C_STAT_MSTPENDING) == 0);
+  if (I2C_STAT_MSTSTATE(i2cStatus) != I2C_STAT_MSSTATE_RECEIVE_READY) return;  // we did not get received data, abort
+  uint8_t buttons = i2cGetMasterData(I2C0);
+  i2cSetMasterControl(I2C0, I2C_MSCTL_MSTSTOP);
 }
