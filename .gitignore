@@ -63,3 +63,7 @@ settings.json
 
 #cortex-debug
 .cortex-debug.*
+
+# kicad 6 temporaries and local settings
+*-backups/
+*.kicad_prl
