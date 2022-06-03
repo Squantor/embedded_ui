@@ -82,5 +82,6 @@ void boardReadIoExpander(void) {
   } while ((i2cStatus & I2C_STAT_MSTPENDING) == 0);
   if (I2C_STAT_MSTSTATE(i2cStatus) != I2C_STAT_MSSTATE_RECEIVE_READY) return;  // we did not get received data, abort
   uint8_t buttons = i2cGetMasterData(I2C0);
+  application.handleButton(buttons);
   i2cSetMasterControl(I2C0, I2C_MSCTL_MSTSTOP);
 }

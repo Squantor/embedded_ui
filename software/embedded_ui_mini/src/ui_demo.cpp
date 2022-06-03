@@ -52,7 +52,8 @@ void uiDemo::handleTick(void) {
   runs++;
 }
 
-void uiDemo::handleButton(void) {
-  // called when the IO expander is read out and passes the buttons
-  // TODO maybe make button event enum? or just next/prev/enter passing?
+void uiDemo::handleButton(uint8_t buttons) {
+  dsPuts(&streamUart, "got buttons:");
+  printHexU8(&streamUart, buttons);
+  dsPuts(&streamUart, strCrLf);
 }
