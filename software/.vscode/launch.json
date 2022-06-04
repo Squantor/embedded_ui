@@ -20,7 +20,6 @@
             "preLaunchTask": "build embedded ui mini",
             "svdFile": "${workspaceFolder}/libMcuLL/svd/nxp/LPC824.svd",
             "debuggerArgs": ["--command=${workspaceFolder}/gdb_scripts/embedded_ui_mini_debug.txt"],
-            "gdbpath": "/home/abilos/programs/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gdb"
         },
         {
             "type": "cortex-debug",
