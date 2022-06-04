@@ -20,7 +20,25 @@
             "preLaunchTask": "build embedded ui mini",
             "svdFile": "${workspaceFolder}/libMcuLL/svd/nxp/LPC824.svd",
             "debuggerArgs": ["--command=${workspaceFolder}/gdb_scripts/embedded_ui_mini_debug.txt"],
-            "gdbpath": "/home/abilos/programs/gcc-arm-none-eabi-10-2020-q4-major/bin//arm-none-eabi-gdb"
+            "gdbpath": "/home/abilos/programs/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-gdb"
+        },
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "jlink",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceFolder}/bin/embedded_ui_mini/debug/embedded_ui_mini.elf",
+            "name": "Debug embedded ui mini segger",
+            "device": "LPC824M201",
+            "interface": "swd",
+            "runToEntryPoint": "main",
+            "serverArgs": [
+                "-gui"
+            ],
+            "ipAddress": null,
+            "serialNumber": null,
+            "preLaunchTask": "build embedded ui mini",
+            "svdFile": "${workspaceFolder}/libMcuLL/svd/nxp/LPC824.svd",
         },
     ]
 }
