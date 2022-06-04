@@ -8,14 +8,14 @@ For conditions of distribution and use, see LICENSE file
 #include <ui_demo.hpp>
 #include <strings.hpp>
 #include <stream_uart.hpp>
-#include <SSD1306.hpp>
+#include <SSD1306_fb.hpp>
 #include <graphicalconsole.hpp>
 #include <font_8x8.h>
 #include <print.h>
 
 using namespace util;
 
-SSD1306::display<0x78> currentDisplay;
+SSD1306::display<0x78, SSD1306::standard128x64> currentDisplay;
 graphicalConsole<128, 64> currentConsole(font8x8VerticalFlipped);
 
 void currentDisplayWriteWindow(uint8_t xBegin, uint8_t xEnd, uint8_t yBegin, uint8_t yEnd, const uint8_t *data, uint16_t length) {
@@ -35,7 +35,7 @@ const datastreamChar_t displayStream{
 
 void uiDemo::init(void) {
   dsPuts(&streamUart, strHello);
-  currentDisplay.init(SSD1306::init128x64, sizeof(SSD1306::init128x64));
+  currentDisplay.init();
   dsPuts(&displayStream, "Hello World!");
   runs = 0;
 }
