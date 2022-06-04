@@ -43,6 +43,7 @@ void uiDemo::init(void) {
 void uiDemo::handleTick(void) {
   printDecNzU32(&displayStream, runs);
   dsWriteChar(&displayStream, runs & 0x7F);
+  currentDisplay.update();
   uint8_t invertDisplay;
   if (runs & 16)
     invertDisplay = SSD1306::displayInvert;
