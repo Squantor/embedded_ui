@@ -9,3 +9,4 @@ set {int}0x40048000 = 2
 load bin/embedded_ui_mini/debug/embedded_ui_mini.elf
 set {int}0x40048000 = 2
 compare-sections
+b main
