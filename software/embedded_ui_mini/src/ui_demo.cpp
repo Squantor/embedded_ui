@@ -21,9 +21,9 @@ constexpr uint8_t leftButton = 0x01;
 constexpr uint8_t rightButton = 0x04;
 constexpr uint8_t enterButton = 0x02;
 
-menuEntry uiDemo[4] = {{"One", 1}, {"Two", 2}, {"Three", 3}, {nullptr, 0}};
+menuEntry uiDemo[] = {{"One", 1}, {"Two", 2}, {"Three", 3}, {"Four", 4}, {"Five", 5}, {"Six", 5}, {"Seven", 5}, {nullptr, 0}};
 
-menuSystem<0> uiDemoMenu(uiDemo, &mono8x8RowFlip);
+menuSystem<128, 64> uiDemoMenu(uiDemo, &mono8x8RowFlip);
 SSD1306::display<0x78, SSD1306::standard128x64> currentDisplay;
 graphicalConsole<128, 64> currentConsole(&mono8x8RowFlip);
 
@@ -70,6 +70,8 @@ void uiDemo::handleButton(uint8_t buttons) {
   if (changedButtons & leftButton) uiDemoMenu.buttonLeft(!(buttons & leftButton));
   if (changedButtons & rightButton) uiDemoMenu.buttonRight(!(buttons & rightButton));
   if (changedButtons & enterButton) uiDemoMenu.buttonEnter(!(buttons & enterButton));
-  uiDemoMenu.render();
+  currentDisplay.clear(0x00);
+  uiDemoMenu.render(currentDisplayWriteWindow);
+  currentDisplay.update();
   prevButtons = buttons;
 }

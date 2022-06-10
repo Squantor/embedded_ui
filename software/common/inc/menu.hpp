@@ -13,13 +13,14 @@ For conditions of distribution and use, see LICENSE file
 #include <stdint.h>
 #include <array.hpp>
 #include <fonts/font.hpp>
+#include <string.h>
 
 struct menuEntry {
   const char* const name;
   const int value;
 };
 
-template <int dummy>
+template <uint8_t maxX, uint8_t maxY>
 struct menuSystem {
   /**
    * @brief Construct a new menu System object
@@ -56,8 +57,25 @@ struct menuSystem {
    */
   void buttonEnter(bool pressed) {}
 
-  void render() {
+  void render(auto writeWindow) {
+    uint8_t xPos = 0, yPos = 0;
     // print menu structure
+    menuEntry* menuItem = menuStructure;
+    while (menuItem->name != nullptr) {
+      const char* c = menuItem->name;
+      while (*c != 0) {
+        util::array<uint8_t, 8> bitmap;
+        memcpy(bitmap.data(), ascii2Font(printFont, *c), sizeof(bitmap));
+        if (menuItem == menuCurrent)
+          for (uint8_t& data : bitmap) data = ~data;
+        writeWindow(xPos, xPos + 7, yPos, yPos, bitmap.data(), 8);
+        c++;
+        xPos += 8;
+      }
+      menuItem++;
+      yPos += 8;
+      xPos = 0;
+    }
   }
 
  private:
