@@ -22,7 +22,8 @@ $(PROJECT)/src/strings.cpp \
 common/src/stream_uart.cpp \
 $(PROJECT)/src/$(BOARD).cpp \
 $(PROJECT)/src/application.cpp \
-$(PROJECT)/src/ui_demo.cpp
+$(PROJECT)/src/ui_demo.cpp \
+common/src/menu.cpp
 
 INCLUDES += -I$(PROJECT)/inc -Icommon/inc
 
