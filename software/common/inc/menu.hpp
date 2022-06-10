@@ -12,6 +12,7 @@ For conditions of distribution and use, see LICENSE file
 
 #include <stdint.h>
 #include <array.hpp>
+#include <fonts/font.hpp>
 
 struct menuEntry {
   const char* const name;
@@ -25,7 +26,8 @@ struct menuSystem {
    *
    * @param menuStructure
    */
-  menuSystem(menuEntry* menuStructure) : menuStructure{menuStructure}, menuCurrent{menuStructure} {}
+  menuSystem(menuEntry* menuStructure, font* currentFont)
+    : menuStructure{menuStructure}, menuCurrent{menuStructure}, printFont{currentFont} {}
 
   /**
    * @brief
@@ -54,11 +56,14 @@ struct menuSystem {
    */
   void buttonEnter(bool pressed) {}
 
-  void render() {}
+  void render() {
+    // print menu structure
+  }
 
  private:
   menuEntry* menuStructure; /*!< menu structure */
   menuEntry* menuCurrent;   /*!< current selected menu entry */
+  font* printFont;          /*!< font to print the menu with */
 };
 
 #endif
