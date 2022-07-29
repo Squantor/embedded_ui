@@ -15,7 +15,6 @@
             "targetId": 1,
             "device": "LPC824",
             "BMPGDBSerialPort": "/dev/ttyACM0",
-            "runToEntryPoint": "main",
             "preLaunchCommands": [],
             "postLaunchCommands": ["set {int}0x40048000 = 2","compare-sections"],
             "preRestartCommands": [],

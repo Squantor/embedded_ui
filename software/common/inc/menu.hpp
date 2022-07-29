@@ -61,9 +61,9 @@ struct menuSystem {
     uint8_t xPos = 0, yPos = 0;
     // print menu structure
     menuEntry* menuItem = menuStructure;
-    while (menuItem->name != nullptr) {
+    while (menuItem->name != nullptr && yPos < maxY) {
       const char* c = menuItem->name;
-      while (*c != 0) {
+      while (*c != 0 && xPos < maxX) {
         util::array<uint8_t, 8> bitmap;
         memcpy(bitmap.data(), ascii2Font(printFont, *c), sizeof(bitmap));
         if (menuItem == menuCurrent)
@@ -76,6 +76,7 @@ struct menuSystem {
       yPos += 8;
       xPos = 0;
     }
+    // if we are in a leaf then call its render routine
   }
 
  private:

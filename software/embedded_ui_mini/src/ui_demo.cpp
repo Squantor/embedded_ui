@@ -21,7 +21,8 @@ constexpr uint8_t leftButton = 0x01;
 constexpr uint8_t rightButton = 0x04;
 constexpr uint8_t enterButton = 0x02;
 
-menuEntry uiDemo[] = {{"One", 1}, {"Two", 2}, {"Three", 3}, {"Four", 4}, {"Five", 5}, {"Six", 5}, {"Seven", 5}, {nullptr, 0}};
+menuEntry uiDemo[] = {{"abcdef", 1}, {"ghijk", 2},     {"lmnop", 3},       {"qrst", 4},
+                      {"uvwxyz", 5}, {"ABCDEFGHI", 5}, {"JKLMNOPQRST", 5}, {nullptr, 0}};
 
 menuSystem<128, 64> uiDemoMenu(uiDemo, &mono8x8RowFlip);
 SSD1306::display<0x78, SSD1306::standard128x64> currentDisplay;
